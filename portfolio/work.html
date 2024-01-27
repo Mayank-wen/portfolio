@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{overflow: hidden;}
+        @font-face {
+            font-family: customFont;
+            src: url(./Poor_Story/PoorStory-Regular.ttf);
+        }
+
+        @font-face {
+            font-family: customFont2;
+            src: url(./Poiret_One/PoiretOne-Regular.ttf);
+        }
+
+        body {
+            background-color: rgb(31, 28, 24);
+            color: rgb(248, 234, 217);
+            font-family: cu;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 0px;
+            overflow-y: hidden;
+        }
+
+        .left {
+            left: 0;
+            background-color: rgb(31, 28, 24);
+        }
+
+        .right {
+            right: 0;
+            background-color: rgb(31, 28, 24);
+            text-align: center;
+            font-family: customFont2;
+        }
+
+        .i1,
+        .i3 {
+            font-size: 50px;
+            padding: 20px;
+        }
+
+        .i2 {
+            font-size: 50px;
+            padding: 50px 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+        }
+
+        p.test2 {
+            writing-mode: vertical-rl;
+            transform: scale(-1, -1);
+            margin-top: 100px;
+
+        }
+
+        .lineUp {
+            animation: 3s anim-lineUp ease-out;
+        }
+        .lineU {
+            animation: 5s anim-lineUp ease-in;
+        }
+        @keyframes anim-lineUp {
+            0% {
+                opacity: 0;
+                transform: translateY(80%);
+            }
+
+            20% {
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        h2 {
+            font-family: customFont;
+            font-size: 40px;
+            width: 200px;
+
+        }
+
+        p {
+            font-family: customFont;
+            font-size: 20px;
+        }
+
+        .i {
+            margin-top: 100px;
+            margin-left: 150px;
+        }
+        .a{
+            color: rgb(248, 234, 217);
+            text-decoration: underline;
+
+        }
+        a:hover{
+            text-decoration: line-through;
+        }
+        a{text-decoration: none;
+            color: rgb(248, 234, 217);  }
+            :root {
+      --secondary-color: #151226;
+      --contrast-color: rgb(248, 234, 217);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      z-index: -10;
+      background-color: var(--contrast-color);
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    
+    
+      animation: expand .8s ease forwards;
+      
+      position: relative;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      transition: all .8s ease;
+    }
+
+    .container_content {
+      width: 50%;
+    }
+
+   
+
+    .par {
+      height: auto;
+      overflow: hidden;
+    }
+    @keyframes slideIn {
+      0% {
+        transform: translateX(500px) scale(.2);
+      }
+
+      100% {
+        transform: translateX(0px) scale(1);
+      }
+    }
+
+    @keyframes slideUp {
+      0% {
+        transform: translateY(300px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    @keyframes expand {
+      0% {
+        transform: translateX(1400px);
+      }
+
+      100% {
+        transform: translateX(0px);
+      }
+    }
+    </style>
+</head>
+
+<body> <div class='container'>
+    <div class="container_content">
+      <div class="container_content_inner">
+
+
+    <div class="split left">
+
+        <p class="test2">| |  |  |  |   | |/<a class="a" href="portfolio.html">H O M E </a>
+        /</p>
+        <div class="i">
+            <h2 class="lineU">WORK</h2>
+            <p class="lineUp">This is a showcase of some of my works in the cs field<br>
+                 including different computer languages such as java,C,js AND React.js<br><br>
+                 The world of digital design and development is constantly evolving and so<br> has my role over the last 3 years. I’m still learning and gaining new skills<br>every day </p>
+        </div>
+    </div>
+    </div>
+   
+    <div class="split right">
+        <div class="i1">
+            <h1><a href="#">Weather app</a></h1>
+        </div>
+        <div class="i2">
+            <h1><a href="#">currecny converter</a></h1>
+        </div>
+        <div class="i3">
+            <H1> <a href="#">chess game</a></H1>
+        </div>
+    </div>
+    </div>
+</div>
+</div>
+<div class="overlay"></div>
+</body>
+
+</html>
